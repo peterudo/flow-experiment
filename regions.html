@@ -1,0 +1,167 @@
+<html>
+<head>
+    <title>CSS3 Regions</title>
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #E0E0E0;
+            /*overflow: hidden;*/
+            font-family: Helvetica;
+        }
+
+        figure {
+            margin: 0;
+            padding: 0;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: Georgia;
+        }
+
+        figcaption {
+            font-family: Helvetica;
+            font-size: 12px;
+        }
+
+        .pages {
+            display: -webkit-box;
+            -webkit-box-orient: horizontal;
+            height: 100%;
+        }
+
+        .page {
+            box-sizing: border-box;
+            background-color: #F5F5F5;
+            width: 98%;
+            height: 98%;
+            margin: 1%;
+        }
+
+        .page article {
+            max-width: 600px;
+        }
+
+        .article-hor {
+            display: -webkit-box;
+            -webkit-box-orient: horizontal;
+            width: 100%;
+        }
+
+        .article-vert {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            height: 100%;
+        }
+
+        .body {
+            -webkit-flow-into: article-content-flow;
+        }
+
+        .column-fill {
+            -webkit-box-flex: 1;
+            display: -webkit-box;
+            -webkit-box-orient: horizontal;
+        }
+
+        .column {
+            -webkit-flow-from: article-content-flow;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            padding: 15px;
+            /*min-width: 320px;*/
+        }
+
+        .column-fill > .column {
+            -webkit-box-flex: 1;
+            height: auto;
+            width: auto;
+        }
+
+        .excerpt {
+            font-weight: bold;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        .column-fill > .column:nth-child(2),
+        .column-fill > .column:nth-child(3),
+        .column-fill > .column:nth-child(4),
+        .column-fill > .column:nth-child(5),
+        .column-fill > .column:nth-child(6) {
+            display: none;
+        }
+
+        @media (min-width: 600px) {
+            .column-fill > .column:nth-child(2) {
+                display: block;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .column-fill > .column:nth-child(3) {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="pages">
+    <div class="page">
+        <div class="article-hor">
+            <div class="article-vert">
+                <article>
+                    <header>
+                        <figure>
+                            <img src="http://touch.vg.no/out/images/article/2012/01/18/20143629/1/mediumUrl/150559.jpg">
+                            <figcaption>REDD FOR BALLEN: KrF-leder Knut Arild Hareide beskytter seg mot SV-veteran Hallgeir Langelands susende volleyskudd på fotballtreningen i Stortingets lille gymsal. Foto: Helge Mikalsen</figcaption>
+                        </figure>
+                    </header>
+                    <div class="article-content">
+                        <h1>Best uten ball</h1>
+                        <div class="excerpt">
+                            STORTINGETS GYMSAL (VG) Velkommen til salen der de tøffeste slagene står i Stortinget. En mann utmerker seg. Knut Arild Hareide oppsøker ikke de vondeste duellene.
+                        </div>
+                        <div class="byline">Av Frank Ertesvåg, Helge Mikalsen (foto)</div>
+                    </div>
+                </article>
+                <div class="column-fill">
+                    <div class="column"><img src="http://touch.vg.no/out/images/article/2012/01/18/20143629/1/mediumUrl/150559.jpg" style="width: 100px;"></div>
+                    <div class="column"></div>
+                </div>
+            </div>
+            <div class="column-fill">
+                <div class="column"></div>
+                <div class="column"></div>
+                <div class="column"></div>
+            </div>
+        </div>
+    </div>
+    <div class="page">
+        <div class="article-vert">
+            <div class="column-fill">
+                <div class="column"></div>
+                <div class="column"></div>
+            </div>
+        </div>
+    </div>
+    <div class="page">
+        <div class="article-vert">
+            <div class="column-fill">
+                <div class="column"></div>
+                <div class="column"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="body"><p>Det er fotballtrening i Stortingets kjeller – flere meter under de topptunge rekesmørbrødene med majones i stortingsrestauranten.</p><h3>Mannesvette</h3><p>Tolv modne menn og to damer jager en hard lærball som fyker veggimellom.</p><p>KrF-leder Knut Arild Hareide forsøkte en gang å smugle inn en slags stofftrukket innendørs softball på fotballtreningene. Men det ble kontant avvist av flertallet.</p><p>Her skal det smelle i veggene og hoies når noen får rent treff på hel volley.</p><p>Det lukter mannesvette i det lille ballrommet som fører inn til gymsalen. Hareide stiller i moderne teknisk, blå sportstrøye og innendørs fotballsko. Han har en tydelig kul på den ene leggen. Nesten en klump.</p><p>– Den kommer fra en takling jeg ble utsatt for, forteller KrF-lederen som neppe kan beskyldes for å leve opp til fotballetternavnet sitt.</p><p>Han er litt tung i steget. Mangler temposkiftet og farten som kreves i innendørs fotball. Men han har god kondisjon og et følsomt venstrebein.</p><p>Det treffer ballen forbløffende ofte.</p><h3>Lengst mulig vekk fra ballen</h3><p>– Jeg spilte fotball i min ungdom på Bømlo. Men jeg ble som regel plassert på venstre backplass da vi møtte dårlige motstandere. Da vi møtte gode lag, var jeg gjerne venstre ving. De ville ha meg lengst mulig vekk fra ballen, erkjenner KrF-lederen om sin fortid i Rubbestadneset IL.</p><p>For å balansere bildet, forteller han at den kjente eksproffen Arne Larsen Økland faktisk er tremenningen hans. Kanskje ikke tykkeste slekta, men likevel: Arne spilte i Bayer Leverkusen og scoret tre mål mot selveste Bayern München for 32 år siden. Økland ble kreditert et fjerde mål, men var ærlig nok til å fortelle dommeren at ballen ikke hadde vært inne.</p><p>– Slik oppførsel liker vi i KrF, sier Hareide før han går på handikaptoalettet og tar seg en slurk vann rett fra springen.</p><p>Sammen med KrF-kjempen Kjell Ingolf Ropstad gjør han seg klar til å møte SV med veteranen Hallgeir Langeland som kaptein. Laget er forsterket med Klassekampen-journalist Mimir Kristjansson. Kvinneandelen består av Kristin Benestad fra partikontoret.</p><p>Langeland røyker 30 om dagen, og har flagrende hår som Løvebakkens svar på Argentinas gamle fotballstjerne Mario Kempes. SVs lyntogforkjemper har stilt på Stortingets fotballtreninger to ganger</p><p>i uken siden 1997.</p><h3>Langelands spesialiteter</h3><p>Langelands spesialiteter er lavt press, raske kontringer og skudd via veggen. I tillegg er 56-åringen sterk i kroppen og uredd i duellene. I motsetning til Hareide er han iført en fotballshorts som var moderne på 80-tallet. Den velbrukte T-skjorten prydes av påskriften NEI TIL RYFAST.</p><p>Mens Hareide har Liverpool som favorittlag, sverger Langeland til mer ukjente Crystal Palace.</p><p>– Jeg kunne jo ikke holde med et lag som alle andre holdt med, sier Langeland.</p><p>SV-eren har større toppfart enn motstanderen fra KrF. Likevel er det Hareide som setter inn det første målet i kampen mellom de to partiene.</p><p>Langeland ser at både medspillere og motspillere er litt slitne. Da setter han inn støtet. Han løper regelrett fra Hareide og setter inn 1–1.</p><p>Etter et sugende løp hjem i forsvar får partileder Hareide satt i gang Ropstad med en gjennombruddspasning. Han sender i vei et knallhardt skudd som fyker rett i mål.</p><p>2–1 til KrF over SV, og endelig en seier i Stortinget over de rødgrønne.</p></div>
+
+</body>
+</html>
+
+<!-- http://touch.vg.no/out/images/article/2012/01/18/20143630/1/mediumUrl/150561.jpg -->
